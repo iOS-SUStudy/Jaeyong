@@ -8,14 +8,36 @@
 
 import SwiftUI
 
+
 struct LandmarkList: View {
+    init() {
+        // To remove only extra separators below the list:
+//        UITableView.appearance().tableFooterView = UIView()
+        // To remove all separators including the actual ones:
+//        UITableView.appearance().separatorStyle = .none
+        UITableView.appearance().separatorColor = .clear
+    }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List(landmarkData) { landmark in
+                NavigationLink(destination: LandmarkDetail(landmark: landmark)) {
+                    LandmarkRow(landmark: landmark)
+                }
+                
+            }
+            
+            .navigationBarTitle(Text("Landmarks"))
+
+        }
     }
 }
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkList()
+        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
+            LandmarkList()
+                .previewDevice(PreviewDevice(rawValue: deviceName))
+                .previewDisplayName(deviceName)
+        }
     }
 }

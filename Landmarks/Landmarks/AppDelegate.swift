@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  SUStudy_FirstWeek
+//  Landmarks
 //
-//  Created by 이재용 on 2020/08/27.
+//  Created by 이재용 on 2020/08/28.
 //  Copyright © 2020 jaeyong. All rights reserved.
 //
 

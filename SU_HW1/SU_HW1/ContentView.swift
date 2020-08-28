@@ -20,8 +20,7 @@ struct ContentView: View {
                     Text("개용이's House")
                         .font(.title).foregroundColor(.black)
                         .padding()
-                    Text("Hello, everyone")
-                        .font(.subheadline)
+                    
                 }
                 
             }
