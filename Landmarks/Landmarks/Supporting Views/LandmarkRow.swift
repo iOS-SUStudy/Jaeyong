@@ -14,11 +14,13 @@ struct LandmarkRow: View {
     var body: some View {
         HStack {
             landmark.image.resizable().frame(width: 50, height: 50, alignment: .center)
-            VStack(alignment: .leading) {
-                Text(landmark.name).font(.headline)
-                Text(landmark.state).font(.subheadline)
-            }
+            Text(landmark.name)
             Spacer()
+            if landmark.isFavorite {
+                Image(systemName: "star.fill")
+                    .imageScale(.medium)
+                    .foregroundColor(.yellow)
+            }
         }
     }
 }
