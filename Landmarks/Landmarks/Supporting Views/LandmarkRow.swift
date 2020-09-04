@@ -16,6 +16,11 @@ struct LandmarkRow: View {
             landmark.image.resizable().frame(width: 50, height: 50, alignment: .center)
             Text(landmark.name)
             Spacer()
+            if landmark.isFeatured {
+                Image(systemName: "heart.fill")
+                    .imageScale(.medium)
+                    .foregroundColor(.red)
+            }
             if landmark.isFavorite {
                 Image(systemName: "star.fill")
                     .imageScale(.medium)

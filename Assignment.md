@@ -17,3 +17,8 @@ init() {
 }
 ```
 
+
+
+**3주차 과제: isFeatured 값 추가하기**
+
+<img src="https://user-images.githubusercontent.com/56102421/92227453-4459a780-eee1-11ea-8fc5-7b0c7ad647e5.png" width="30%"> 

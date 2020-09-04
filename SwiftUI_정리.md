@@ -46,6 +46,8 @@
   **UIViewRepresentable** Protocol : 두가지 함수를 가져야 한다. MKMapView를 만드는 함수, 뷰를 구성하고 변화에 반응하는 함수
 
   ```swift
+  import MapKit
+  
   struct MapView: UIViewRepresentable {
       func makeUIView(context: Context) -> MKMapView {
           MKMapView(frame: .zero)
@@ -198,5 +200,10 @@
   }
   ```
 
-  
+
+
+
+### Handling User Input
+
+- State & ObservableObject & EnvironmentObject 
 

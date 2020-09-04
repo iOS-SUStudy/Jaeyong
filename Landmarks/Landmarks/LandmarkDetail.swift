@@ -28,6 +28,17 @@ struct LandmarkDetail: View {
                         .font(.title)
                         .foregroundColor(.black)
                     Button(action: {
+                        self.userData.landmarks[self.landmarkIndex].isFeatured.toggle()
+                    }) {
+                        if self.userData.landmarks[self.landmarkIndex].isFeatured {
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(Color.red)
+                        } else {
+                            Image(systemName: "heart")
+                                .foregroundColor(Color.gray)
+                        }
+                    }
+                    Button(action: {
                         self.userData.landmarks[self.landmarkIndex].isFavorite.toggle()
                     }) {
                         if self.userData.landmarks[self.landmarkIndex].isFavorite {
